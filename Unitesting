@@ -1,28 +1,30 @@
+# Online Python compiler (interpreter) to run Python online.
+
+# Write Python 3 code in this online editor and run it.
+
 import unittest
 
 class simpleTest2(unittest.TestCase):
 
    def setUp(self):
 
-      self.a = 10
+      self.a = [1,2,3,4]
 
-      self.b = 20
+      self.b = [5,6,7,8]
 
       name = self.shortDescription()
 
-      if name == "[1,2,3,4,]":
+      if name == "[1,2,3,4]":
 
-         self.a = 10
-
-         self.b = 20
+         
 
          print(name, self.a, self.b)
 
-      if name == "[5,4,3,2,1]":
+      if name == "[1,2,3,4,5]":
 
-         self.a = 50
+         self.a = [1,2,3,4,5,1,2]
 
-         self.b = 60
+         #self.b = []
 
          print(name, self.a, self.b)
 
@@ -34,17 +36,19 @@ class simpleTest2(unittest.TestCase):
 
       """[1,2,3,4]"""
 
-      result = self.a+self.b
+      result =self.a+self.b
 
-      self.assertTrue(result == 100)
+      self.assertTrue(result == [1,2,3,4,5,6,7,8])
 
    def testsub(self):
 
-      """[5,4,3,2,1]"""
+      """[1,2,3,4,5]"""
 
-      result = self.a-self.b
+      result =list(dict(zip(self.a,self.a)).keys())
 
-      self.assertTrue(result == -10)
+      print(self.a,"hdhjd")
+
+      self.assertTrue(result == [1,2,3,4,5])
 
       
 
